@@ -26,7 +26,7 @@ pub fn test(input : &str) -> bool {
 
     // loop through the inputs in reverse as per the luhn spec
     for (index,cc_num) in cc_nums.iter().rev().enumerate()  {
-    completed_sum += if index % 2 == 1 { known_luhn_values[*cc_num as usize] } else { *cc_num }
+        completed_sum += if index % 2 == 1 { known_luhn_values[*cc_num as usize] } else { *cc_num }
     }
 
     // the completedSum should be divisible by 10
